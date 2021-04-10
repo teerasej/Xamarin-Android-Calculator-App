@@ -1,4 +1,4 @@
-﻿using Android.App;
+using Android.App;
 using Android.OS;
 using Android.Runtime;
 using Android.Widget;
@@ -19,6 +19,23 @@ namespace CalculatorApp
             var inputFirst = FindViewById<EditText>(Resource.Id.inputFirst);
             var inputSecond = FindViewById<EditText>(Resource.Id.inputSecond);
             var buttonCalcualte = FindViewById<Button>(Resource.Id.button_calculate);
+
+            buttonCalcualte.Click += (sender, e) =>
+            {
+                var first = inputFirst.Text;
+                var second = inputFirst.Text;
+                Toast toast;
+
+                if (string.IsNullOrEmpty(first) || string.IsNullOrEmpty(second))
+                {
+                    toast = Toast.MakeText(Application.Context, "ข้อมูลยังกรอกไม่ครบ", ToastLength.Short);
+                    toast.Show();
+                    return;
+                }
+
+              
+
+            };
         }
         public override void OnRequestPermissionsResult(int requestCode, string[] permissions, [GeneratedEnum] Android.Content.PM.Permission[] grantResults)
         {
