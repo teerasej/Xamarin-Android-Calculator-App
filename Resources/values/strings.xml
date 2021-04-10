@@ -1,4 +1,7 @@
 <resources>
     <string name="app_name">CalculatorApp</string>
     <string name="action_settings">Settings</string>
+    <string name="text_first_input">ตัวตั้ง</string>
+    <string name="text_second_input">ตัวบวก</string>
+    <string name="text_button_calculate">คำนวน</string>
 </resources>

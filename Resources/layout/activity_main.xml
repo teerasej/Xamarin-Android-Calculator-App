@@ -13,7 +13,7 @@
 		android:layout_height="match_parent"
 		android:id="@+id/linearLayout1" >
 		<TextView
-			android:text="ตัวตั้ง"
+			android:text="@string/text_first_input"
 			android:textAppearance="?android:attr/textAppearanceLarge"
 			android:layout_width="match_parent"
 			android:layout_height="wrap_content"
@@ -24,7 +24,7 @@
 			android:layout_height="wrap_content"
 			android:id="@+id/editText2" />
 		<TextView
-			android:text="ตัวบวก"
+			android:text="@string/text_second_input"
 			android:textAppearance="?android:attr/textAppearanceLarge"
 			android:layout_width="match_parent"
 			android:layout_height="wrap_content"
@@ -40,7 +40,7 @@
 			android:layout_weight="1"
 			android:id="@+id/space1" />
 		<Button
-			android:text="คำนวน"
+			android:text="@string/text_button_calculate"
 			android:layout_width="match_parent"
 			android:layout_height="wrap_content"
 			android:id="@+id/button1" />
