@@ -3582,10 +3582,10 @@ namespace CalculatorApp
 			public const int browser_actions_menu_view = 2131230791;
 			
 			// aapt resource value: 0x7F080048
-			public const int button1 = 2131230792;
+			public const int buttonPanel = 2131230792;
 			
 			// aapt resource value: 0x7F080049
-			public const int buttonPanel = 2131230793;
+			public const int button_calculate = 2131230793;
 			
 			// aapt resource value: 0x7F08004A
 			public const int center = 2131230794;
@@ -3663,85 +3663,85 @@ namespace CalculatorApp
 			public const int disableHome = 2131230817;
 			
 			// aapt resource value: 0x7F080062
-			public const int editText1 = 2131230818;
+			public const int edit_query = 2131230818;
 			
 			// aapt resource value: 0x7F080063
-			public const int editText2 = 2131230819;
+			public const int end = 2131230819;
 			
 			// aapt resource value: 0x7F080064
-			public const int edit_query = 2131230820;
+			public const int enterAlways = 2131230820;
 			
 			// aapt resource value: 0x7F080065
-			public const int end = 2131230821;
+			public const int enterAlwaysCollapsed = 2131230821;
 			
 			// aapt resource value: 0x7F080066
-			public const int enterAlways = 2131230822;
-			
-			// aapt resource value: 0x7F080067
-			public const int enterAlwaysCollapsed = 2131230823;
+			public const int exitUntilCollapsed = 2131230822;
 			
 			// aapt resource value: 0x7F080068
-			public const int exitUntilCollapsed = 2131230824;
+			public const int expanded_menu = 2131230824;
 			
-			// aapt resource value: 0x7F08006A
-			public const int expanded_menu = 2131230826;
+			// aapt resource value: 0x7F080067
+			public const int expand_activities_button = 2131230823;
 			
 			// aapt resource value: 0x7F080069
-			public const int expand_activities_button = 2131230825;
-			
-			// aapt resource value: 0x7F08006B
-			public const int fill = 2131230827;
-			
-			// aapt resource value: 0x7F08006E
-			public const int filled = 2131230830;
+			public const int fill = 2131230825;
 			
 			// aapt resource value: 0x7F08006C
-			public const int fill_horizontal = 2131230828;
+			public const int filled = 2131230828;
+			
+			// aapt resource value: 0x7F08006A
+			public const int fill_horizontal = 2131230826;
+			
+			// aapt resource value: 0x7F08006B
+			public const int fill_vertical = 2131230827;
 			
 			// aapt resource value: 0x7F08006D
-			public const int fill_vertical = 2131230829;
+			public const int @fixed = 2131230829;
+			
+			// aapt resource value: 0x7F08006E
+			public const int forever = 2131230830;
 			
 			// aapt resource value: 0x7F08006F
-			public const int @fixed = 2131230831;
-			
-			// aapt resource value: 0x7F080070
-			public const int forever = 2131230832;
-			
-			// aapt resource value: 0x7F080071
-			public const int fragment_container_view_tag = 2131230833;
+			public const int fragment_container_view_tag = 2131230831;
 			
 			// aapt resource value: 0x7F080002
 			public const int FUNCTION = 2131230722;
 			
+			// aapt resource value: 0x7F080070
+			public const int ghost_view = 2131230832;
+			
+			// aapt resource value: 0x7F080071
+			public const int ghost_view_holder = 2131230833;
+			
 			// aapt resource value: 0x7F080072
-			public const int ghost_view = 2131230834;
+			public const int group_divider = 2131230834;
 			
 			// aapt resource value: 0x7F080073
-			public const int ghost_view_holder = 2131230835;
+			public const int home = 2131230835;
 			
 			// aapt resource value: 0x7F080074
-			public const int group_divider = 2131230836;
+			public const int homeAsUp = 2131230836;
 			
 			// aapt resource value: 0x7F080075
-			public const int home = 2131230837;
+			public const int icon = 2131230837;
 			
 			// aapt resource value: 0x7F080076
-			public const int homeAsUp = 2131230838;
+			public const int icon_group = 2131230838;
 			
 			// aapt resource value: 0x7F080077
-			public const int icon = 2131230839;
+			public const int ifRoom = 2131230839;
 			
 			// aapt resource value: 0x7F080078
-			public const int icon_group = 2131230840;
+			public const int image = 2131230840;
 			
 			// aapt resource value: 0x7F080079
-			public const int ifRoom = 2131230841;
+			public const int info = 2131230841;
 			
 			// aapt resource value: 0x7F08007A
-			public const int image = 2131230842;
+			public const int inputFirst = 2131230842;
 			
 			// aapt resource value: 0x7F08007B
-			public const int info = 2131230843;
+			public const int inputSecond = 2131230843;
 			
 			// aapt resource value: 0x7F08007C
 			public const int italic = 2131230844;
@@ -4578,6 +4578,15 @@ namespace CalculatorApp
 			
 			// aapt resource value: 0x7F0D002F
 			public const int status_bar_notification_info_overflow = 2131558447;
+			
+			// aapt resource value: 0x7F0D0030
+			public const int text_button_calculate = 2131558448;
+			
+			// aapt resource value: 0x7F0D0031
+			public const int text_first_input = 2131558449;
+			
+			// aapt resource value: 0x7F0D0032
+			public const int text_second_input = 2131558450;
 			
 			static String()
 			{

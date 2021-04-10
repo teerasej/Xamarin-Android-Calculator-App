@@ -1,6 +1,7 @@
 ﻿using Android.App;
 using Android.OS;
 using Android.Runtime;
+using Android.Widget;
 using AndroidX.AppCompat.App;
 
 namespace CalculatorApp
@@ -14,6 +15,10 @@ namespace CalculatorApp
             Xamarin.Essentials.Platform.Init(this, savedInstanceState);
             // Set our view from the "main" layout resource
             SetContentView(Resource.Layout.activity_main);
+
+            var inputFirst = FindViewById<EditText>(Resource.Id.inputFirst);
+            var inputSecond = FindViewById<EditText>(Resource.Id.inputSecond);
+            var buttonCalcualte = FindViewById<Button>(Resource.Id.button_calculate);
         }
         public override void OnRequestPermissionsResult(int requestCode, string[] permissions, [GeneratedEnum] Android.Content.PM.Permission[] grantResults)
         {

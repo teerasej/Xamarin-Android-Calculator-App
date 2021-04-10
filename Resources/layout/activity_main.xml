@@ -11,7 +11,7 @@
 		android:padding="18px"
 		android:layout_width="match_parent"
 		android:layout_height="match_parent"
-		android:id="@+id/linearLayout1" >
+		android:id="@+id/linearLayout1">
 		<TextView
 			android:text="@string/text_first_input"
 			android:textAppearance="?android:attr/textAppearanceLarge"
@@ -22,7 +22,7 @@
 			android:inputType="number"
 			android:layout_width="match_parent"
 			android:layout_height="wrap_content"
-			android:id="@+id/editText2" />
+			android:id="@+id/inputFirst" />
 		<TextView
 			android:text="@string/text_second_input"
 			android:textAppearance="?android:attr/textAppearanceLarge"
@@ -33,7 +33,7 @@
 			android:inputType="number"
 			android:layout_width="match_parent"
 			android:layout_height="wrap_content"
-			android:id="@+id/editText1" />
+			android:id="@+id/inputSecond" />
 		<Space
 			android:layout_width="match_parent"
 			android:layout_height="wrap_content"
@@ -43,6 +43,6 @@
 			android:text="@string/text_button_calculate"
 			android:layout_width="match_parent"
 			android:layout_height="wrap_content"
-			android:id="@+id/button1" />
+			android:id="@+id/button_calculate" />
 	</LinearLayout>
 </RelativeLayout>
