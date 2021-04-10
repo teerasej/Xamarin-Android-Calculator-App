@@ -1,4 +1,5 @@
 ﻿using Android.App;
+using Android.Content;
 using Android.OS;
 using Android.Runtime;
 using Android.Widget;
@@ -40,8 +41,12 @@ namespace CalculatorApp
 
                     var result = firstNum + secondNum;
 
-                    toast = Toast.MakeText(Application.Context, "ผลลัพธ์: " + result.ToString(), ToastLength.Short);
-                    toast.Show();
+                    //toast = Toast.MakeText(Application.Context, "ผลลัพธ์: " + result.ToString(), ToastLength.Short);
+                    //toast.Show();
+
+                    Intent intent = new Intent(this, typeof(ResultActivity));
+                    intent.PutExtra("result", result);
+                    StartActivity(intent);
 
                 }
                 catch (System.Exception ex)
