@@ -1,4 +1,4 @@
-using Android.App;
+﻿using Android.App;
 using Android.OS;
 using Android.Runtime;
 using Android.Widget;
@@ -23,12 +23,30 @@ namespace CalculatorApp
             buttonCalcualte.Click += (sender, e) =>
             {
                 var first = inputFirst.Text;
-                var second = inputFirst.Text;
+                var second = inputSecond.Text;
                 Toast toast;
 
                 if (string.IsNullOrEmpty(first) || string.IsNullOrEmpty(second))
                 {
                     toast = Toast.MakeText(Application.Context, "ข้อมูลยังกรอกไม่ครบ", ToastLength.Short);
+                    toast.Show();
+                    return;
+                }
+
+                try
+                {
+                    var firstNum = int.Parse(first);
+                    var secondNum = int.Parse(second);
+
+                    var result = firstNum + secondNum;
+
+                    toast = Toast.MakeText(Application.Context, "ผลลัพธ์: " + result.ToString(), ToastLength.Short);
+                    toast.Show();
+
+                }
+                catch (System.Exception ex)
+                {
+                    toast = Toast.MakeText(Application.Context, "ข้อมูลไม่สามารถนำมาคำนวนได้", ToastLength.Short);
                     toast.Show();
                     return;
                 }
