@@ -34,6 +34,11 @@
 			android:layout_width="match_parent"
 			android:layout_height="wrap_content"
 			android:id="@+id/editText1" />
+		<Space
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:layout_weight="1"
+			android:id="@+id/space1" />
 		<Button
 			android:text="คำนวน"
 			android:layout_width="match_parent"
