@@ -5,7 +5,7 @@ using AndroidX.AppCompat.App;
 
 namespace CalculatorApp
 {
-    [Activity(Label = "ResultActivity")]
+    [Activity(Label = "ResultActivity", ParentActivity = typeof(MainActivity))]
     public class ResultActivity : AppCompatActivity
     {
         protected override void OnCreate(Bundle savedInstanceState)
