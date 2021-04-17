@@ -1,6 +1,7 @@
-﻿
+
 using Android.App;
 using Android.OS;
+using Android.Widget;
 using AndroidX.AppCompat.App;
 
 namespace CalculatorApp
@@ -13,6 +14,9 @@ namespace CalculatorApp
             base.OnCreate(savedInstanceState);
             SetContentView(Resource.Layout.activity_result);
             // Create your application here
+
+            var result = Intent.GetIntExtra("result", 0);
+
         }
     }
 }
