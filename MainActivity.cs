@@ -2,6 +2,7 @@
 using Android.Content;
 using Android.OS;
 using Android.Runtime;
+using Android.Views.InputMethods;
 using Android.Widget;
 using AndroidX.AppCompat.App;
 
@@ -10,6 +11,10 @@ namespace CalculatorApp
     [Activity(Label = "@string/app_name", Theme = "@style/AppTheme", MainLauncher = true)]
     public class MainActivity : AppCompatActivity
     {
+        EditText inputFirst;
+        EditText inputSecond;
+        Button buttonCalculate;
+
         protected override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
@@ -17,47 +22,25 @@ namespace CalculatorApp
             // Set our view from the "main" layout resource
             SetContentView(Resource.Layout.activity_main);
 
-            var inputFirst = FindViewById<EditText>(Resource.Id.inputFirst);
-            var inputSecond = FindViewById<EditText>(Resource.Id.inputSecond);
-            var buttonCalcualte = FindViewById<Button>(Resource.Id.button_calculate);
+            inputFirst = FindViewById<EditText>(Resource.Id.inputFirst);
+            inputSecond = FindViewById<EditText>(Resource.Id.inputSecond);
+            buttonCalculate = FindViewById<Button>(Resource.Id.button_calculate);
 
-            buttonCalcualte.Click += (sender, e) =>
+            inputSecond.EditorAction += (sender, e) =>
             {
-                var first = inputFirst.Text;
-                var second = inputSecond.Text;
-                Toast toast;
-
-                if (string.IsNullOrEmpty(first) || string.IsNullOrEmpty(second))
+                if (e.ActionId == ImeAction.Done)
                 {
-                    toast = Toast.MakeText(Application.Context, "ข้อมูลยังกรอกไม่ครบ", ToastLength.Short);
-                    toast.Show();
-                    return;
+                    DoCalculation();
                 }
-
-                try
+                else
                 {
-                    var firstNum = int.Parse(first);
-                    var secondNum = int.Parse(second);
-
-                    var result = firstNum + secondNum;
-
-                    //toast = Toast.MakeText(Application.Context, "ผลลัพธ์: " + result.ToString(), ToastLength.Short);
-                    //toast.Show();
-
-                    Intent intent = new Intent(this, typeof(ResultActivity));
-                    intent.PutExtra("result", result);
-                    StartActivity(intent);
-
+                    e.Handled = false;
                 }
-                catch (System.Exception ex)
-                {
-                    toast = Toast.MakeText(Application.Context, "ข้อมูลไม่สามารถนำมาคำนวนได้", ToastLength.Short);
-                    toast.Show();
-                    return;
-                }
+            };
 
-              
-
+            buttonCalculate.Click += (sender, e) =>
+            {
+                DoCalculation();
             };
         }
         public override void OnRequestPermissionsResult(int requestCode, string[] permissions, [GeneratedEnum] Android.Content.PM.Permission[] grantResults)
@@ -65,6 +48,42 @@ namespace CalculatorApp
             Xamarin.Essentials.Platform.OnRequestPermissionsResult(requestCode, permissions, grantResults);
 
             base.OnRequestPermissionsResult(requestCode, permissions, grantResults);
+        }
+
+        private void DoCalculation()
+        {
+            var first = inputFirst.Text;
+            var second = inputSecond.Text;
+            Toast toast;
+
+            if (string.IsNullOrEmpty(first) || string.IsNullOrEmpty(second))
+            {
+                toast = Toast.MakeText(Application.Context, "ข้อมูลยังกรอกไม่ครบ", ToastLength.Short);
+                toast.Show();
+                return;
+            }
+
+            try
+            {
+                var firstNum = int.Parse(first);
+                var secondNum = int.Parse(second);
+
+                var result = firstNum + secondNum;
+
+                //toast = Toast.MakeText(Application.Context, "ผลลัพธ์: " + result.ToString(), ToastLength.Short);
+                //toast.Show();
+
+                Intent intent = new Intent(this, typeof(ResultActivity));
+                intent.PutExtra("result", result);
+                StartActivity(intent);
+
+            }
+            catch (System.Exception ex)
+            {
+                toast = Toast.MakeText(Application.Context, "ข้อมูลไม่สามารถนำมาคำนวนได้", ToastLength.Short);
+                toast.Show();
+                return;
+            }
         }
     }
 }
