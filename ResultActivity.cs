@@ -1,4 +1,4 @@
-
+﻿
 using Android.App;
 using Android.OS;
 using Android.Widget;
@@ -17,6 +17,8 @@ namespace CalculatorApp
 
             var result = Intent.GetIntExtra("result", 0);
 
+            var txtResult = FindViewById<TextView>(Resource.Id.txtResult);
+            txtResult.Text = result.ToString();
         }
     }
 }
