@@ -4589,10 +4589,7 @@ namespace CalculatorApp
 			public const int text_first_input = 2131558449;
 			
 			// aapt resource value: 0x7F0D0032
-			public const int text_page_result = 2131558450;
-			
-			// aapt resource value: 0x7F0D0033
-			public const int text_second_input = 2131558451;
+			public const int text_second_input = 2131558450;
 			
 			static String()
 			{
